@@ -8,8 +8,7 @@ public class RouletteController : MonoBehaviour
 
     private void Update()
     {
-        //클릭하면 회전 속도를 설정한다.
-        if (Input.GetMouseButtonDown(0))// 0이면 좌클릭, 1이면 우클릭, 2이면 마우스 휠을 클릭한 것입니다.
+        if (Input.GetButtonDown("Jump"))
         {
             회전속도 = Random.Range(-50f, 50.1f); //Random.Range(0, 10)은 0에서 9까지 반환함
             Debug.Log(회전속도);
