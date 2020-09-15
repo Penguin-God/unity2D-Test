@@ -1,14 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class RouletteController : MonoBehaviour
 {
-    
-
     float 회전속도 = 0;
-
     private void Update()
     {
         if (Input.GetMouseButtonDown(0))
@@ -23,4 +21,15 @@ public class RouletteController : MonoBehaviour
 
         회전속도 *= 0.96f; //룰렛의 속도 감소
     }
+
+    //public void Rotate()
+    //{
+    //    회전속도 = Random.Range(-50f, 50.1f);
+    //    for(int i = 0; i < 150; i++)
+    //    {
+    //        transform.Rotate(0, 0, 회전속도);
+    //        회전속도 *= 0.96f;
+    //        Debug.Log(회전속도);
+    //    }
+    //}
 }
