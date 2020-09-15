@@ -1,14 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class RouletteController : MonoBehaviour
 {
+    
+
     float 회전속도 = 0;
 
     private void Update()
     {
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetMouseButtonDown(0))
         {
             회전속도 = Random.Range(-50f, 50.1f); //Random.Range(0, 10)은 0에서 9까지 반환함
             Debug.Log(회전속도);
