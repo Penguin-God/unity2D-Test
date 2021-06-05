@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Simple 2D Platformer BE2/Game/Aim Shot.unity
     guid: 5d160f7e90358004fa9d8db9075660b9
+  - enabled: 1
+    path: Assets/Simple 2D Platformer BE2/Sample/Sample.unity
+    guid: 6a59202207d841841951ba9ed6c21f4b
   m_configObjects: {}
