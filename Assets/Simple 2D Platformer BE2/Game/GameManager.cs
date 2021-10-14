@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        StartCoroutine(CoinSpawn_Coroutine());
+        StartCoroutine("CoinSpawn_Coroutine");
     }
 
     private void Update()
@@ -90,9 +90,8 @@ public class GameManager : MonoBehaviour
     {
         if (coinList.Count > 9)
         {
-            CoinDontClick();
             isDead = true;
-            Time.timeScale = 0;
+            StopCoroutine("CoinSpawn_Coroutine");
             Set_GameOverUI();
         }
     }
@@ -101,13 +100,5 @@ public class GameManager : MonoBehaviour
     {
         gameOverText.SetActive(true);
         gameOverScoreText.text = "최종 점수 : " + gameScore;
-    }
-
-    void CoinDontClick()
-    {
-        for(int i = 0; i < coinList.Count; i++)
-        {
-            coinList[i].GetComponent<Collider2D>().enabled = false;
-        }
     }
 }

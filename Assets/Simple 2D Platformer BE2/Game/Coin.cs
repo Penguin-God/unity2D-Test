@@ -14,6 +14,8 @@ public class Coin : MonoBehaviour
 
     private void OnMouseDown()
     {
+        if (GameManager.instance.isDead) return;
+
         GameManager.instance.gameScore += score;
         GameManager.instance.UpdateScoreText();
         GameManager.instance.coinList.Remove(gameObject);
